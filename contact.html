@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cara memesan KilaMeal, pertanyaan yang sering diajukan, dan kontak MasaKilat.">
+  <title>Cara Pesan &amp; Kontak | MasaKilat - KilaMeal</title>
+  <link rel="icon" href="image/carrot.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Beranda MasaKilat">
+        <img src="image/logo.png" alt="Logo MasaKilat">
+      </a>
+
+      <button class="icon-btn menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Cara Pesan &amp; Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Ganti tema terang/gelap">&#9790;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HEADER HALAMAN ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge">Bantuan</span>
+        <h1>Cara Pesan &amp; Kontak</h1>
+        <p>Pilih cara pesan yang paling nyaman, atau tanyakan apa saja kepada kami.</p>
+      </div>
+    </section>
+
+    <!-- ===== CARA PESAN ===== -->
+    <section>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Pilihan Pemesanan</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="icon">&#128172;</div>
+            <span class="badge preorder">Tersedia</span>
+            <h3 style="margin-top:10px;">Pesan via WhatsApp</h3>
+            <p>Pilih produk dan jumlah, lalu kirim pesan. Admin akan mengonfirmasi stok, alamat, ongkir, dan pembayaran.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">&#128722;</div>
+            <span class="badge">Segera hadir</span>
+            <h3 style="margin-top:10px;">Pesan di Website</h3>
+            <p>Checkout langsung di website, termasuk sebagai tamu tanpa wajib membuat akun.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">&#128100;</div>
+            <span class="badge">Segera hadir</span>
+            <h3 style="margin-top:10px;">Akun opsional</h3>
+            <p>Simpan alamat dan riwayat pesanan agar pembelian berikutnya lebih cepat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ (ACCORDION - JavaScript) ===== -->
+    <section class="bg-cream" id="faq">
+      <div class="container" style="max-width:820px;">
+        <div class="section-title reveal">
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <details class="faq-item" open>
+          <summary>Apa isi satu kemasan KilaMeal?</summary>
+          <div class="answer">Setiap kemasan berisi 100 gram nasi dan 100 gram lauk, dengan total isi makanan 200 gram. Berat kemasan penuh akan diumumkan setelah data final tersedia.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Bagaimana cara menyajikannya?</summary>
+          <div class="answer">Penyajian menggunakan perlengkapan pemanas yang disertakan. Langkah lengkap ada di kemasan dan panduan penyajian. Waktu pemanasan akan dicantumkan setelah pengujian selesai.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Berapa lama masa simpannya?</summary>
+          <div class="answer">Masa simpan akan dicantumkan setelah divalidasi. Ikuti petunjuk penyimpanan yang tertera pada kemasan.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Apakah ada informasi alergen?</summary>
+          <div class="answer">Komposisi dan alergen per varian akan ditampilkan di halaman Produk setelah data final tersedia.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Apakah bisa memesan untuk kelompok?</summary>
+          <div class="answer">Bisa. Gunakan halaman Susun Bekalmu untuk menghitung jumlah kemasan, lalu kirim hasilnya ke admin via WhatsApp.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Berapa harganya?</summary>
+          <div class="answer">Harga normal Rp55.000 per paket lengkap. Saat ini ada harga promo peluncuran Rp49.999 per paket lengkap. Periode promo akan diumumkan oleh admin.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK & FORM (JavaScript) ===== -->
+    <section id="kontak">
+      <div class="container calc-grid">
+
+        <div class="prose reveal">
+          <h2 style="color:var(--orange);margin-bottom:12px;">Hubungi Kami</h2>
+          <p>Tanyakan stok, varian, atau pesanan kelompok. Kami biasanya membalas melalui WhatsApp.</p>
+          <p><strong>WhatsApp:</strong> +62 858-0027-4774</p>
+          <p><strong>Instagram:</strong> @masakilat</p>
+          <a href="https://wa.me/6285800274774" class="btn btn-wa" target="_blank" rel="noopener" style="margin-top:12px;">Chat WhatsApp</a>
+          <p class="placeholder-note">Catatan untuk tim: pastikan nomor dan jam layanan sudah benar sebelum dipublikasikan.</p>
+        </div>
+
+        <form id="contact-form" class="card" novalidate>
+          <div class="form-group">
+            <label for="c-name">Nama</label>
+            <input type="text" id="c-name" name="name" maxlength="60" placeholder="Nama panggilanmu">
+            <small class="error" id="err-name"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="c-wa">Nomor WhatsApp</label>
+            <input type="tel" id="c-wa" name="wa" placeholder="08xxxxxxxxxx" inputmode="tel">
+            <small class="error" id="err-wa"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="c-topic">Topik</label>
+            <select id="c-topic" name="topic">
+              <option value="">Pilih topik</option>
+              <option value="tanya">Tanya produk</option>
+              <option value="pesan">Pesan</option>
+              <option value="keluhan">Keluhan</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+            <small class="error" id="err-topic"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="c-order">Nomor pesanan (opsional)</label>
+            <input type="text" id="c-order" name="order" maxlength="30" placeholder="Jika sudah pernah memesan">
+          </div>
+
+          <div class="form-group">
+            <label for="c-msg">Pesan</label>
+            <textarea id="c-msg" name="message" maxlength="500" placeholder="Tulis pertanyaan atau pesananmu di sini"></textarea>
+            <small class="error" id="err-msg"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Kirim via WhatsApp</button>
+          <div id="form-success" class="form-success hidden" role="status"></div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="image/logo.png" alt="Logo MasaKilat" style="height:40px"></a>
+        <p>MasaKilat, Enak dan Cepat!</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="contact.html">Cara Pesan</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6285800274774" target="_blank" rel="noopener">WhatsApp +62 858-0027-4774</a></li>
+          <li><a href="https://instagram.com/masakilat" target="_blank" rel="noopener">Instagram @masakilat</a></li>
+          <li><a href="#">Kebijakan privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="year"></span> MasaKilat. Semua hak dilindungi.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6285800274774" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">&#128172;</a>
+  <button class="to-top" aria-label="Kembali ke atas">&#8593;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

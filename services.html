@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Katalog KilaMeal dari MasaKilat: varian, isi kemasan, dan harga.">
+  <title>Produk | MasaKilat - KilaMeal</title>
+  <link rel="icon" href="images/carrot.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Beranda MasaKilat">
+        <img src="image/logo.png" alt="Logo MasaKilat">
+      </a>
+
+      <button class="icon-btn menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active" aria-current="page">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+          <li><a href="contact.html">Cara Pesan &amp; Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Ganti tema terang/gelap">&#9790;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HEADER HALAMAN ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge">Katalog</span>
+        <h1>Produk KilaMeal</h1>
+        <p>Setiap kemasan berisi nasi dan lauk matang. Pilih varian, lalu lihat detailnya.</p>
+      </div>
+    </section>
+
+    <!-- ===== KATALOG ===== -->
+    <section>
+      <div class="container">
+        <!-- Filter: fitur JavaScript -->
+        <div class="filter-bar" role="group" aria-label="Filter produk">
+          <button class="filter-btn active" data-filter="semua" aria-pressed="true">Semua</button>
+          <button class="filter-btn" data-filter="ayam" aria-pressed="false">Ayam</button>
+          <button class="filter-btn" data-filter="sayur" aria-pressed="false">Sayuran</button>
+        </div>
+
+        <div class="card-grid" id="product-grid">
+
+          <article class="card product-card" data-cat="ayam">
+            <img src="images/label-teriyaki.png" alt="Label kemasan Ayam Teriyaki" class="label-img">
+            <span class="badge preorder">Preorder</span>
+            <h3>Ayam Teriyaki</h3>
+            <p class="desc">Nasi dan lauk ayam dengan rasa teriyaki.</p>
+            <div class="price-row">
+              <span class="price price-now">Rp49.999</span>
+              <span class="price-old price-normal">Rp55.000</span>
+            </div>
+            <button class="btn btn-primary btn-detail"
+              data-name="Ayam Teriyaki"
+              data-desc="Nasi dan lauk ayam dengan rasa teriyaki.">Lihat Detail</button>
+          </article>
+
+          <article class="card product-card" data-cat="ayam">
+            <img src="images/label-chilli.png" alt="Label kemasan Ayam Chilli Padi" class="label-img">
+            <span class="badge preorder">Preorder</span>
+            <h3>Ayam Chilli Padi</h3>
+            <p class="desc">Nasi dan lauk ayam dengan sambal cabai padi.</p>
+            <div class="price-row">
+              <span class="price price-now">Rp49.999</span>
+              <span class="price-old price-normal">Rp55.000</span>
+            </div>
+            <button class="btn btn-primary btn-detail"
+              data-name="Ayam Chilli Padi"
+              data-desc="Nasi dan lauk ayam dengan sambal cabai padi.">Lihat Detail</button>
+          </article>
+
+          <article class="card product-card" data-cat="sayur">
+            <img src="images/label-capcay.png" alt="Label kemasan Capcay" class="label-img">
+            <span class="badge preorder">Preorder</span>
+            <h3>Capcay</h3>
+            <p class="desc">Nasi dan tumisan capcay.</p>
+            <div class="price-row">
+              <span class="price price-now">Rp49.999</span>
+              <span class="price-old price-normal">Rp55.000</span>
+            </div>
+            <button class="btn btn-primary btn-detail"
+              data-name="Capcay"
+              data-desc="Nasi dan tumisan capcay.">Lihat Detail</button>
+          </article>
+
+          <article class="card product-card" data-cat="sayur">
+            <img src="images/bowl.jpg" alt="Ilustrasi penyajian Mix Vegetable" class="photo">
+            <span class="badge preorder">Preorder</span>
+            <h3>Mix Vegetable</h3>
+            <p class="desc">Nasi dan tumisan sayuran campur.</p>
+            <div class="price-row">
+              <span class="price price-now">Rp49.999</span>
+              <span class="price-old price-normal">Rp55.000</span>
+            </div>
+            <button class="btn btn-primary btn-detail"
+              data-name="Mix Vegetable"
+              data-desc="Nasi dan tumisan sayuran campur.">Lihat Detail</button>
+          </article>
+        </div>
+
+        <p class="placeholder-note">
+          Catatan: label Mix Vegetable belum tersedia, jadi foto sementara memakai ilustrasi. Komposisi dan alergen akan diperbarui setelah data produk final.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODAL DETAIL PRODUK (JavaScript) ===== -->
+  <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Tutup detail">&times;</button>
+      <img src="images/bowl.jpg" alt="" id="modal-img">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc" class="note"></p>
+      <ul class="detail-list">
+        <li><strong>Isi:</strong> nasi dan lauk matang</li>
+        <li><strong>Komposisi &amp; alergen:</strong> akan diumumkan setelah data produk final</li>
+        <li><strong>Penyajian:</strong> ikuti panduan kemasan; waktu penyajian menunggu hasil pengujian</li>
+        <li><strong>Penyimpanan:</strong> masa simpan menunggu validasi</li>
+        <li><strong>Harga:</strong> <span id="modal-price"></span></li>
+      </ul>
+      <div class="form-group">
+        <label for="modal-qty">Jumlah kemasan</label>
+        <input type="number" id="modal-qty" min="1" max="50" value="1">
+        <small class="error" id="modal-err"></small>
+      </div>
+      <button class="btn btn-wa" id="modal-wa" style="width:100%;">Pesan via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo MasaKilat" style="height:40px"></a>
+        <p>MasaKilat, Enak dan Cepat!</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="contact.html">Cara Pesan</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+          <li><a href="contact.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6285800274774" target="_blank" rel="noopener">WhatsApp +62 858-0027-4774</a></li>
+          <li><a href="https://instagram.com/masakilat" target="_blank" rel="noopener">Instagram @masakilat</a></li>
+          <li><a href="#">Kebijakan privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="year"></span> MasaKilat. Semua hak dilindungi.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6285800274774" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">&#128172;</a>
+  <button class="to-top" aria-label="Kembali ke atas">&#8593;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

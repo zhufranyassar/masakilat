@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Susun Bekalmu: hitung jumlah kemasan KilaMeal untuk perjalanan hiking atau camping.">
+  <title>Susun Bekalmu | MasaKilat - KilaMeal</title>
+  <link rel="icon" href="image/carrot.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Beranda MasaKilat">
+        <img src="image/logo.png" alt="Logo MasaKilat">
+      </a>
+
+      <button class="icon-btn menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html" class="active" aria-current="page">Susun Bekalmu</a></li>
+          <li><a href="contact.html">Cara Pesan &amp; Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Ganti tema terang/gelap">&#9790;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HEADER HALAMAN ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge">Perencanaan</span>
+        <h1>Susun Bekalmu</h1>
+        <p>Hitung jumlah kemasan KilaMeal untuk perjalananmu. Hasilnya adalah perkiraan, bukan total kebutuhan gizi.</p>
+      </div>
+    </section>
+
+    <!-- ===== KALKULATOR (FORM + JAVASCRIPT) ===== -->
+    <section>
+      <div class="container calc-grid">
+
+        <form id="calc-form" class="card" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="people">Jumlah orang</label>
+              <input type="number" id="people" name="people" min="1" max="50" value="2" required>
+              <small class="error" id="err-people"></small>
+            </div>
+            <div class="form-group">
+              <label for="meals">Waktu makan dengan KilaMeal</label>
+              <input type="number" id="meals" name="meals" min="1" max="10" value="2" required>
+              <small class="error" id="err-meals"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="trip-date">Tanggal dibutuhkan (opsional)</label>
+            <input type="date" id="trip-date" name="trip-date">
+          </div>
+
+          <fieldset>
+            <legend>Varian dan jumlah kemasan</legend>
+            <p class="note" style="margin-bottom:8px;">Jumlah dapat diubah manual. Total tidak harus sama dengan perkiraan.</p>
+
+            <div class="variant-row">
+              <label for="v-chili">Ayam Chili Padi</label>
+              <input type="number" id="v-chili" min="0" max="100" value="2" data-name="Ayam Chili Padi" data-price="49999">
+            </div>
+            <div class="variant-row">
+              <label for="v-teriyaki">Ayam Teriyaki</label>
+              <input type="number" id="v-teriyaki" min="0" max="100" value="0" data-name="Ayam Teriyaki" data-price="49999">
+            </div>
+            <div class="variant-row">
+              <label for="v-mix">Mix Vegetable</label>
+              <input type="number" id="v-mix" min="0" max="100" value="2" data-name="Mix Vegetable" data-price="49999">
+            </div>
+            <div class="variant-row">
+              <label for="v-capcay">Capcay</label>
+              <input type="number" id="v-capcay" min="0" max="100" value="0" data-name="Capcay" data-price="49999">
+            </div>
+            <small class="error" id="err-variant"></small>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="notes">Catatan untuk admin (opsional)</label>
+            <textarea id="notes" rows="3" maxlength="300" placeholder="Misalnya: pengambilan di basecamp, atau pesanan kelompok."></textarea>
+          </div>
+
+          <div class="btn-group">
+            <button type="reset" class="btn btn-outline" id="calc-grid">Hapus</button>
+          </div>
+        </form>
+
+        <!-- Ringkasan hasil -->
+        <aside class="card summary" aria-live="polite">
+          <h3>Ringkasan bekal</h3>
+          <p>Perkiraan kemasan (orang &times; waktu makan): <strong id="sum-suggest">0</strong></p>
+          <p>Kemasan yang dipilih: <strong id="sum-selected">0</strong></p>
+          <p id="sum-note" class="note"></p>
+
+          <ul id="sum-items"></ul>
+
+          <p>Total harga: <strong id="sum-total" class="price">Rp0</strong></p>
+          <p class="note">Isi per kemasan: 100 gram nasi dan 100 gram lauk. Berat kemasan penuh akan ditampilkan setelah data final tersedia.</p>
+
+          <button class="btn btn-wa" id="calc-wa" disabled>Pesan via WhatsApp</button>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="image/logo.png" alt="Logo MasaKilat" style="height:40px"></a>
+        <p>MasaKilat, Enak dan Cepat!</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="contact.html">Cara Pesan</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+          <li><a href="contact.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6285800274774" target="_blank" rel="noopener">WhatsApp +62 858-0027-4774</a></li>
+          <li><a href="https://instagram.com/masakilat" target="_blank" rel="noopener">Instagram @masakilat</a></li>
+          <li><a href="#">Kebijakan privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="year"></span> MasaKilat. Semua hak dilindungi.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6285800274774" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">&#128172;</a>
+  <button class="to-top" aria-label="Kembali ke atas">&#8593;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

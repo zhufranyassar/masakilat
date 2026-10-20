@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MasaKilat mengembangkan KilaMeal, paket nasi dan lauk siap santap untuk kegiatan hiking dan camping.">
+  <title>Home | MasaKilat - KilaMeal</title>
+  <link rel="icon" href="image/carrot.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Library pihak ketiga: Swiper (slider) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="Beranda MasaKilat">
+        <img src="image/logo.png" alt="Logo MasaKilat">
+      </a>
+
+      <button class="icon-btn menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+      <nav id="main-nav" aria-label="Navigasi utama">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+          <li><a href="contact.html">Cara Pesan &amp; Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Ganti tema terang/gelap">&#9790;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">Untuk pendaki &amp; camper</span>
+          <h1>KilaMeal, nasi dan lauk matang untuk perjalananmu</h1>
+          <p>MasaKilat mengembangkan KilaMeal, paket nasi dan lauk siap santap yang dilengkapi perlengkapan pemanas untuk kegiatan hiking dan camping.</p>
+          <div class="btn-group">
+            <a href="services.html" class="btn btn-light">Lihat Produk</a>
+            <a href="bekal.html" class="btn btn-outline-light">Susun Bekalmu</a>
+            <a href="https://wa.me/6285800274774?text=Halo%20MasaKilat%2C%20saya%20ingin%20bertanya%20tentang%20KilaMeal." class="btn btn-wa" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <img src="image/maskot.png" alt="Maskot MasaKilat, chef cantik dengan spatula dan wortel" class="maskot">
+          <img src="image/carrot.png" alt="" class="deco deco-carrot">
+          <img src="image/drumstick.png" alt="" class="deco deco-drum">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MANFAAT / CARD ===== -->
+    <section>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Kenapa KilaMeal?</h2>
+          <p>Bekal yang jelas isinya, mudah dihitung jumlahnya, dan mudah disiapkan saat perjalanan.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="icon">&#129518;</div>
+            <h3>Hitung kebutuhan bekal</h3>
+            <p>Masukkan jumlah orang dan waktu makan, lalu lihat perkiraan jumlah kemasan yang perlu dibawa.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">&#127845;</div>
+            <h3>Isi paket yang jelas</h3>
+            <p>Setiap kemasan berisi 100 gram nasi dan 100 gram lauk, dalam kemasan retort yang siap dipanaskan.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">&#128214;</div>
+            <h3>Panduan penyajian</h3>
+            <p>Langkah penyajian dan penyimpanan disusun agar bisa dibaca sebelum berangkat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERI (SWIPER SLIDER) ===== -->
+    <section class="bg-cream">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Lihat Isi Paket</h2>
+          <p>Geser untuk melihat kemasan dan contoh penyajian.</p>
+        </div>
+
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="image/bowl.jpg" alt="Contoh penyajian nasi dan lauk dalam mangkuk">
+              <div class="caption">Ilustrasi penyajian nasi dan lauk</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="image/pouch.jpg" alt="Mockup desain kemasan MasaKilat">
+              <div class="caption">Mockup desain kemasan</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="image/spatula.png" alt="Ilustrasi spatula dengan hiasan wortel" style="object-fit:contain;background:#FFD80C;">
+              <div class="caption">Ilustrasi perlengkapan dapur</div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LANGKAH PEMESANAN ===== -->
+    <section>
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Cara Memesan</h2>
+          <p>Tiga langkah sederhana untuk mendapatkan KilaMeal.</p>
+        </div>
+
+        <div class="steps">
+          <div class="card step reveal">
+            <div class="step-num">1</div>
+            <h3>Pilih produk</h3>
+            <p>Lihat varian di halaman Produk.</p>
+          </div>
+          <div class="card step reveal">
+            <div class="step-num">2</div>
+            <h3>Susun jumlah bekal</h3>
+            <p>Gunakan Susun Bekalmu untuk menghitung kemasan.</p>
+          </div>
+          <div class="card step reveal">
+            <div class="step-num">3</div>
+            <h3>Pesan via WhatsApp</h3>
+            <p>Admin mengonfirmasi stok, ongkir, dan pembayaran.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Siap menyiapkan bekal perjalananmu?</h2>
+        <p>Tanyakan stok, varian, atau pesanan kelompok langsung ke admin kami.</p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="services.html" class="btn btn-light">Lihat Produk</a>
+          <a href="https://wa.me/6285800274774?text=Halo%20MasaKilat%2C%20saya%20ingin%20memesan%20KilaMeal." class="btn btn-wa" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img src="image/logo.png" alt="Logo MasaKilat" style="height:40px"></a>
+        <p>MasaKilat, Enak dan Cepat!</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Produk</a></li>
+          <li><a href="bekal.html">Susun Bekalmu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="contact.html">Cara Pesan</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+          <li><a href="contact.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6285800274774" target="_blank" rel="noopener">WhatsApp +62 858-0027-4774</a></li>
+          <li><a href="https://instagram.com/masakilat" target="_blank" rel="noopener">Instagram @masakilat</a></li>
+          <li><a href="#">Kebijakan privasi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="year"></span> MasaKilat. Semua hak dilindungi.
+    </div>
+  </footer>
+
+  <!-- Tombol mengambang -->
+  <a href="https://wa.me/6285800274774" class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">&#128172;</a>
+  <button class="to-top" aria-label="Kembali ke atas">&#8593;</button>
+
+  <!-- Library: Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
